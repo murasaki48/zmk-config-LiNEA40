@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,
+            //スクロール方向を逆転,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -147,10 +147,10 @@
 
         MARK {
             bindings = <
-&kp LS(NUMBER_1)            &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)                       &kp RS(NUMBER_6)      &kp RS(N7)             &kp RS(N8)             &kp RS(N9)            &kp RS(N0)
-&kp SLASH                   &kp KP_NUMBER_4   &kp KP_NUMBER_5   &kp SEMICOLON     &kp SEMICOLON                    &kp RS(LEFT_BRACKET)  &kp RS(RIGHT_BRACKET)  &kp RIGHT_BRACKET      &kp BACKSLASH         &kp EQUAL
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1   &kp KP_NUMBER_2   &kp APOS          &kp SQT                          &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)     &kp LS(INT1)
-&trans                      &trans            &trans            &trans            &trans         &trans    &trans  &trans                                       &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp LS(QUESTION)
+&kp LS(NUMBER_1)   &kp LS(NUMBER_2)     &kp LS(NUMBER_3)     &kp LS(NUMBER_4)   &kp LS(N5)                           &kp RS(NUMBER_6)      &kp RS(N7)             &kp RS(N8)     &kp RS(N9)   &kp RS(N0)
+&kp LS(BACKSLASH)  &kp LS(KP_NUMBER_4)  &kp LS(KP_NUMBER_5)  &kp LS(SEMICOLON)  &kp LS(SEMICOLON)                    &kp RS(LEFT_BRACKET)  &kp RS(RIGHT_BRACKET)  &kp RS(COMMA)  &kp RS(DOT)  &kp RS(SLASH)
+&kp BACKSLASH      &kp EQUAL            &kp GRAVE            &kp SINGLE_QUOTE   &kp SEMICOLON                        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp COMMA      &kp DOT      &kp SLASH
+&trans             &trans               &trans               &trans             &trans             &trans    &trans  &trans                                       &trans         &trans       &trans
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -160,10 +160,10 @@
 
         CURSOR {
             bindings = <
-&trans    &kp LC(LG(LEFT_ARROW))  &kp UP_ARROW  &kp LC(LG(RIGHT_ARROW))  &trans                       &kp KP_MULTIPLY  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp KP_PLUS
-&trans    &kp LEFT_ARROW          &kp DOWN      &kp RIGHT_ARROW          &trans                       &kp KP_SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_MINUS
-&kp HOME  &kp PAGE_DOWN           &kp END       &kp PAGE_UP              &trans                       &kp UNDER        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
-&trans    &trans                  &trans        &trans                   &trans  &trans    &kp ENTER  &kp NUMBER_0                   &kp DOT       &kp ENTER     &kp QUESTION
+&kp KP_NUMLOCK           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                    &kp KP_MULTIPLY  &kp NUMBER_7  &kp NUMBER_8    &kp NUMBER_9     &kp KP_PLUS
+&kp KP_MULTIPLY          &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS                     &kp KP_SLASH     &kp NUMBER_4  &kp UP_ARROW    &kp NUMBER_6     &kp DELETE
+&mt LEFT_SHIFT KP_SLASH  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER                    &kp UNDER        &kp LEFT      &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&mt LCTRL EQUAL          &kp KP_N0        &kp KP_DOT       &trans           &trans        &trans    &trans  &trans                         &kp DOT         &kp ENTER        &kp RC(RA(DEL))
             >;
         };
 
