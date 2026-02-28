@@ -57,7 +57,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,
+            //スクロール方向を逆転,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -69,36 +69,6 @@
         ZenkakuHankaku {
             bindings = <&kp GRAVE>;
             key-positions = <11 12>;
-        };
-
-        DeleteKey {
-            bindings = <&kp DEL>;
-            key-positions = <7 8>;
-        };
-
-        InsertKey {
-            bindings = <&kp INS>;
-            key-positions = <6 7>;
-        };
-
-        CenterClick {
-            bindings = <&mkp MB3>;
-            key-positions = <17 16>;
-        };
-
-        RightClick {
-            bindings = <&mkp MB2>;
-            key-positions = <18 17>;
-        };
-
-        PrevClick {
-            bindings = <&mkp MB4>;
-            key-positions = <27 28>;
-        };
-
-        ClickNext {
-            bindings = <&mkp MB5>;
-            key-positions = <26 27>;
         };
     };
 
@@ -137,7 +107,7 @@
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &mkp MB2  &mkp MB3  &msc MOVE_Y(0)
+&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans    &trans    &trans
             >;
@@ -160,10 +130,10 @@
 
         CURSOR {
             bindings = <
-&kp KP_NUMLOCK           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                    &kp KP_MULTIPLY  &kp HOME     &trans          &kp END          &kp KP_PLUS
-&kp KP_MULTIPLY          &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS                     &kp KP_SLASH     &kp PAGE_UP  &kp UP_ARROW    &kp PAGE_DOWN    &kp DELETE
-&mt LEFT_SHIFT KP_SLASH  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER                    &kp UNDER        &kp LEFT     &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&mt LCTRL EQUAL          &kp KP_N0        &kp KP_DOT       &trans           &trans        &trans    &trans  &trans                        &kp DOT         &kp ENTER        &kp RC(RA(DEL))
+&kp KP_NUMLOCK           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                    &kp KP_MULTIPLY  &kp HOME      &trans          &kp END          &kp KP_PLUS
+&kp KP_MULTIPLY          &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS                     &kp KP_SLASH     &msc SCRL_UP  &kp UP_ARROW    &msc SCRL_DOWN   &kp DELETE
+&mt LEFT_SHIFT KP_SLASH  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER                    &kp UNDER        &kp LEFT      &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&mt LCTRL EQUAL          &kp KP_N0        &kp KP_DOT       &trans           &trans        &trans    &trans  &trans                         &kp DOT         &kp ENTER        &kp RC(RA(DEL))
             >;
         };
 
