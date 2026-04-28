@@ -67,8 +67,9 @@
 
 &trackball_listener {
     // ★追加：タイピング中の振動でMOUSEレイヤーに飛ぶのを防ぐ設定
-    // ボールが一定量（ここでは10px）動かない限り、MOUSEレイヤーを起動させない
+    // 振動対策の設定
     vibration_preventer {
+        layers = <0>; // ★これを追加：基本レイヤー(0)で監視を有効にする
         input-processors = <&zip_vibration_filter 10>, <&zip_temp_layer_on_movement MOUSE>;
     };
 
