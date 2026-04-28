@@ -42,6 +42,13 @@
             codes = <INPUT_REL_WHEEL>;
             track-remainders;
         };
+
+        // ★追加：振動対策用のフィルター（しきい値プロセッサ）
+        zip_vibration_filter: zip_vibration_filter {
+            compatible = "zmk,input-processor-threshold";
+            #input-processor-cells = <1>;
+        };
+
     };
 };
 
@@ -53,6 +60,12 @@
 };
 
 &trackball_listener {
+    // ★追加：タイピング中の振動でMOUSEレイヤーに飛ぶのを防ぐ設定
+    // ボールが一定量（ここでは10px）動かない限り、MOUSEレイヤーを起動させない
+    vibration_preventer {
+        input-processors = <&zip_vibration_filter 10>, <&zip_temp_layer_on_movement MOUSE>;
+    };
+
     scroller {
         layers = <SCROLL>;
         input-processors =
