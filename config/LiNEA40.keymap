@@ -49,6 +49,12 @@
             #input-processor-cells = <1>;
         };
 
+        // 3. ★ここが抜けていた可能性が高いです：レイヤー切り替え用プロセッサの定義
+        zip_temp_layer_on_movement: zip_temp_layer_on_movement {
+            compatible = "zmk,input-processor-temp-layer";
+            #input-processor-cells = <1>;
+        };
+
     };
 };
 
