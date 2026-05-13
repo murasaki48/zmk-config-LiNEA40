@@ -13,9 +13,10 @@
 #define FUNCTION 4
 #define SCROLL 5
 #define WIRELESS 6
+#define layer_JIS 7
+#define MARK-JIS 8
 
 //mouse cursol
-
 &mmv {
     delay-ms = <20>;
     trigger-period-ms = <5>;
@@ -24,7 +25,6 @@
 };
 
 //mouse scroll
-
 &msc {
     delay-ms = <3>;
     trigger-period-ms = <3>;
@@ -80,7 +80,6 @@
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
-
             tap-ms = <20>;
         };
     };
