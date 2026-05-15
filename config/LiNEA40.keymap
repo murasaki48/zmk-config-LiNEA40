@@ -15,7 +15,7 @@
 #define SCROLL 5
 #define WIRELESS 6
 #define layer_JIS 7
-#define MARK-JIS 8
+#define MARK_JIS 8
 
 //mouse cursol
 
@@ -189,7 +189,7 @@
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
         };
 
-        MARK-JIS {
+        MARK_JIS {
             bindings = <
 &kp LS(NUMBER_1)  &kp LS(NUMBER_2)         &kp LS(NUMBER_3)  &kp LS(NUMBER_4)   &kp LS(N5)                              &kp RS(NUMBER_6)       &kp RS(N7)         &kp RS(N8)            &kp RS(N9)     &kp RS(N0)
 &trans            &kp LS(INTERNATIONAL_3)  &kp LS(INT_RO)    &kp LS(SEMICOLON)  &kp LS(SINGLE_QUOTE)                    &kp RS(RIGHT_BRACKET)  &kp RS(BACKSLASH)  &kp RS(LEFT_BRACKET)  &kp RS(EQUAL)  &trans
