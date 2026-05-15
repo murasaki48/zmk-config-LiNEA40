@@ -1,4 +1,5 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 150
+
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -17,6 +18,7 @@
 #define MARK-JIS 8
 
 //mouse cursol
+
 &mmv {
     delay-ms = <20>;
     trigger-period-ms = <5>;
@@ -25,6 +27,7 @@
 };
 
 //mouse scroll
+
 &msc {
     delay-ms = <3>;
     trigger-period-ms = <3>;
@@ -54,8 +57,10 @@
 &trackball_listener {
     scroller {
         layers = <SCROLL>;
-        input-processors = <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT> //スクロール方向を逆転
-                         , <&zip_xy_to_scroll_mapper>;
+        input-processors =
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
+            //スクロール方向を逆転
+            <&zip_xy_to_scroll_mapper>;
     };
 };
 
@@ -80,6 +85,7 @@
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
+
             tap-ms = <20>;
         };
     };
