@@ -59,13 +59,30 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,
+            //スクロール方向を逆転,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        MB1 {
+            bindings = <&mkp MB1>;
+            key-positions = <16 17>;
+        };
+
+        MB2 {
+            bindings = <&mkp MB2>;
+            key-positions = <17 18>;
+        };
+
+        MB3 {
+            bindings = <&mkp MB3>;
+            key-positions = <17 7>;
+        };
+    };
 
     behaviors {
         re_kp: sensor_rotate_kp {
@@ -97,10 +114,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
             >;
         };
 
@@ -115,10 +132,10 @@
 
         CURSOR {
             bindings = <
-&kp KP_NUMLOCK           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                    &kp RA(PRINTSCREEN)  &kp HOME      &trans          &kp END          &kp KP_PLUS
-&kp KP_MULTIPLY          &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS                     &kp PRINTSCREEN      &msc SCRL_UP  &kp UP_ARROW    &msc SCRL_DOWN   &kp DELETE
-&mt LEFT_SHIFT KP_SLASH  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER                    &kp UNDER            &kp LEFT      &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&mt LCTRL EQUAL          &kp KP_N0        &kp KP_DOT       &trans           &trans        &trans    &trans  &trans                             &kp DOT         &kp ENTER        &kp RC(RA(DEL))
+&kp KP_NUMLOCK           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS                    &kp RA(PRINTSCREEN)  &kp HOME  &mkp MB3        &kp END          &kp KP_PLUS
+&kp KP_MULTIPLY          &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS                     &kp PRINTSCREEN      &mkp MB1  &kp UP_ARROW    &mkp MB2         &kp DELETE
+&mt LEFT_SHIFT KP_SLASH  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER                    &kp UNDER            &kp LEFT  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&mt LCTRL EQUAL          &kp KP_N0        &kp KP_DOT       &trans           &trans        &trans    &trans  &trans                         &kp DOT         &kp ENTER        &kp RC(RA(DEL))
             >;
         };
 
